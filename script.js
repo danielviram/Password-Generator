@@ -16,7 +16,7 @@ var generateBtn = document.querySelector("#generate");
 generateBtn.addEventListener("click", writePassword);
 
 // Arrays For Characters
-let todoArray= ["a","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z",",A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","W","X","Y","Z","1","2","3","4","5","6","7","8","9","0",];
+let todoArray= ["a","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z",",A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","W","X","Y","Z","1","2","3","4","5","6","7","8","9","0","!","@","#","$","%","^","&","*","(",")","{","}","|","[","]",";",":","<",">","?","/"];
 let lowerCase = ["a","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 let upperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","W","X","Y","Z"];
 let numberChar = ["1","2","3","4","5","6","7","8","9","0"];
@@ -64,9 +64,9 @@ function generatePassword(){
   if (usarUpperCase == true){
     todoArray.push (specialChar)
   }
+
 // For Loop
 
- 
   for ( let i= 0 ; i < contrasenaLarga ; i ++){
   
     let randomCharArrayNum;
@@ -81,10 +81,11 @@ function generatePassword(){
 
     // variable that stores random number based on length of selected array
     randomCharNum=Math.floor(Math.random()*selectedCharArray.length);
-    // 
-    randomChar=selectedCharArray[randomCharNum];
-    // Adding String
 
+    // Creating reandom character by using the selected array and random character
+    randomChar=selectedCharArray[randomCharNum];
+
+    // Adding Strings
     passwordString =randomChar;
   
 
